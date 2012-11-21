@@ -25,10 +25,11 @@
 #   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.         #
 ##########################################################################*/
 
-function Station( name, url )
+function Station( name, url, website )
 {
     this.name = name;
     this.url = url;
+    this.website = website;
 }
 
 // Radios recompiladas por Gonzalo Brusco. 
@@ -42,27 +43,28 @@ function Station( name, url )
 // Quedan muchisimas más radios. Pero por ahora puse las más conocidas. Hubiera querido que fueran más, pero muchas no funcionan o no son compatibles con Amarok. 
 
 var stationArray = new Array (
-    new Station( "Metro (FM 95.1 Buenos Aires)",            "mmsh://201.212.5.144/metro?MSWMExt=.asf" ),
-    //new Station( "Rock & Pop (FM 95.9 Buenos Aires)",       "mmsh://201.212.5.144/audio959-rockandpop?MSWMExt=.asf" ),
-    new Station( "Mega (FM 98.3 Buenos Aires)",             "mmsh://mega.telecomdatacenter.com.ar/mega?MSWMExt=.asf" ),
-    new Station( "Vale (FM 97.5 Buenos Aires)",             "mmsh://200.43.193.190/vale?MSWMExt=.asf" ),
-    new Station( "Radio Mitre (AM 790 Buenos Aires)",       "http://buecrplb01.cienradios.com.ar/Mitre790.mp3" ),
-    new Station( "Radio Mitre (AM 810 Cordoba)",            "http://buecrplb01.cienradios.com.ar/mitre810.mp3" ),
-    new Station( "La 100 (FM 99.9 Buenos Aires)",           "http://buecrplb01.cienradios.com.ar/la100.mp3" ),
-    new Station( "Mía (FM 104.1 Córdoba)",                  "http://buecrplb01.cienradios.com.ar/Mia.mp3" ),
-    new Station( "FM Del Lago (FM 92.1 Bariloche)",         "http://buecrplb01.cienradios.com.ar/Del_Lago_64.mp3" ),
-    new Station( "Radio X (FM 88.3 Mar del Plata)",         "http://buecrplb01.cienradios.com.ar/Radio_X_64.mp3" ),
-    new Station( "Radio 10 (AM 710 Buenos Aires)",          "http://www.radio10.am:8000/radio10.mp3" ),
-    new Station( "Pop Radio (FM 101.5 Buenos Aires)",       "mmsh://200.43.193.190/popradio?MSWMExt=.asf" ),
-    new Station( "Radio TKM (FM 103.7 Buenos Aires)",       "mms://200.43.193.190/radiotkm" ),
-    //new Station( "Radio UBA (FM 87.9 Buenos Aires)",        "mmsh://186.153.1.2:80/5daaqaibaqmuai2ec0modyeiesmge0qi?MSWMExt=.asf" ),
-    new Station( "Radio Continental (AM 590  Buenos Aires)","http://208.80.54.20/CONTINENTALAAC" ),
-    new Station( "Radio Nacional (AM 870 Buenos Aires)",    "http://37.59.19.104:8010/;stream.nsv" ),
-    //new Station( "Radio La Red (AM 910 Buenos Aires)",    "rtmp://vivolared.multimediosamerica.com.ar/streamlared" ), // Amarok no soporta rtmp
-    //new Station( "Radio Del Plata (AM 1030 Buenos Aires)",  "mmsh://186.153.1.2/5daaqaibaqmuai2ewzmeeyeie0mityii?MSWMExt=.asf" ),
-    new Station( "Aspen (FM 102.3 Buenos Aires)",           "mms://200.89.168.16/aspen"),
-    new Station( "ESPN (FM 107.9 Buenos Aires)",            "mms://a183.l1318236841.c13182.l.lm.akamaistream.net/D/183/13182/v0001/reflector:36841")
-    //new Station( "La 2x4 (FM 97.2 Buenos Aires)",           "mmsh://186.153.1.2/5daaqaibaqmuai2efcmodyeie0meeyei?MSWMExt=.asf")
+    new Station( "Metro (FM 95.1 Buenos Aires)",            "mmsh://201.212.5.144/metro?MSWMExt=.asf", "http://www.metro951.com/"),
+    //new Station( "Rock & Pop (FM 95.9 Buenos Aires)",     "mmsh://201.212.5.144/audio959-rockandpop?MSWMExt=.asf", "http://www.fmrockandpop.com/"),
+    new Station( "Mega (FM 98.3 Buenos Aires)",             "mmsh://mega.telecomdatacenter.com.ar/mega?MSWMExt=.asf", "http://mega.10musica.com/" ),
+    new Station( "Vale (FM 97.5 Buenos Aires)",             "mmsh://200.43.193.190/vale?MSWMExt=.asf", "http://www.radio-vale975.com.ar/" ),
+    new Station( "Radio Mitre (AM 790 Buenos Aires)",       "http://buecrplb01.cienradios.com.ar/Mitre790.mp3", "http://www.cienradios.com.ar/argentina/Mitre_AM790/home" ),
+    new Station( "Radio Mitre (AM 810 Cordoba)",            "http://buecrplb01.cienradios.com.ar/mitre810.mp3", "http://www.cienradios.com.ar/argentina/Mitre_Cordoba/home" ),
+    new Station( "La 100 (FM 99.9 Buenos Aires)",           "http://buecrplb01.cienradios.com.ar/la100.mp3", "http://www.cienradios.com.ar/argentina/La_100/home" ),
+    new Station( "Mía (FM 104.1 Córdoba)",                  "http://buecrplb01.cienradios.com.ar/Mia.mp3", "http://www.cienradios.com.ar/argentina/mia/home" ),
+    new Station( "FM Del Lago (FM 92.1 Bariloche)",         "http://buecrplb01.cienradios.com.ar/Del_Lago_64.mp3", "http://www.cienradios.com.ar/argentina/FM_Del_Lago/home" ),
+    new Station( "Radio X (FM 88.3 Mar del Plata)",         "http://buecrplb01.cienradios.com.ar/Radio_X_64.mp3", "http://www.cienradios.com.ar/argentina/Radio_X/home" ),
+    new Station( "Radio 10 (AM 710 Buenos Aires)",          "http://www.radio10.am:8000/radio10.mp3", "http://radio10.infobae.com/" ),
+    new Station( "Radio Rivadavia (AM 630 Buenos Aires)",   "http://streamer5.towebs.com:56661/rivadavia.mp3", "http://www.rivadavia.com.ar/" ),    
+    new Station( "Pop Radio (FM 101.5 Buenos Aires)",       "mmsh://200.43.193.190/popradio?MSWMExt=.asf", "http://www.pop-radio.com.ar/" ),
+    new Station( "Radio TKM (FM 103.7 Buenos Aires)",       "mms://200.43.193.190/radiotkm", "http://radiotkm.mundotkm.com/" ),
+    //new Station( "Radio UBA (FM 87.9 Buenos Aires)",      "mmsh://186.153.1.2:80/5daaqaibaqmuai2ec0modyeiesmge0qi?MSWMExt=.asf", "http://www.uba.ar/radiouba/" ),
+    new Station( "Radio Continental (AM 590  Buenos Aires)","http://208.80.54.20/CONTINENTALAAC", "http://www.continental.com.ar/" ),
+    new Station( "Radio Nacional (AM 870 Buenos Aires)",    "http://37.59.19.104:8010/;stream.nsv", "http://www.radionacional.com.ar/" ),
+    //new Station( "Radio La Red (AM 910 Buenos Aires)",    "rtmp://vivolared.multimediosamerica.com.ar/streamlared", "http://www.radiolared.multimediosamerica.com.ar/home" ), // Amarok no soporta rtmp
+    //new Station( "Radio Del Plata (AM 1030 Buenos Aires)","mmsh://186.153.1.2/5daaqaibaqmuai2ewzmeeyeie0mityii?MSWMExt=.asf", "http://www.amdelplata.com/" ),
+    new Station( "Aspen (FM 102.3 Buenos Aires)",           "mms://200.89.168.16/aspen", "http://www.fmaspen.com/"),
+    new Station( "ESPN (FM 107.9 Buenos Aires)",            "mms://a183.l1318236841.c13182.l.lm.akamaistream.net/D/183/13182/v0001/reflector:36841", "http://www.espn1079.fm/")
+    //new Station( "La 2x4 (FM 97.2 Buenos Aires)",         "mmsh://186.153.1.2/5daaqaibaqmuai2efcmodyeie0meeyei?MSWMExt=.asf", "http://www.la2x4.gov.ar/")
 );
 
 function RadiosArgentinas()
@@ -81,7 +83,8 @@ function onPopulating( level, callbackData, filter )
         item.callbackData = "";
         item.itemName = stationArray[i].name;
         item.playableUrl = stationArray[i].url;
-        item.infoHtml = "A cool stream called " + item.itemName;
+        item.infoHtml = stationArray[i].website;
+	item.artist = "Online Radio";
         script.insertItem( item );
     }
     script.donePopulating();

@@ -48,7 +48,7 @@ var stationArray = new Array (
     new Station( "Mega (FM 98.3 Buenos Aires)",             "mmsh://mega.telecomdatacenter.com.ar/mega?MSWMExt=.asf", "http://mega.10musica.com/" ),
     new Station( "Vale (FM 97.5 Buenos Aires)",             "mmsh://200.43.193.190/vale?MSWMExt=.asf", "http://www.radio-vale975.com.ar/" ),
     new Station( "Radio Mitre (AM 790 Buenos Aires)",       "http://buecrplb01.cienradios.com.ar/Mitre790.mp3", "http://www.cienradios.com.ar/argentina/Mitre_AM790/home" ),
-    new Station( "Radio Mitre (AM 810 Cordoba)",            "http://buecrplb01.cienradios.com.ar/mitre810.mp3", "http://www.cienradios.com.ar/argentina/Mitre_Cordoba/home" ),
+    new Station( "Radio Mitre (AM 810 Córdoba)",            "http://buecrplb01.cienradios.com.ar/mitre810.mp3", "http://www.cienradios.com.ar/argentina/Mitre_Cordoba/home" ),
     new Station( "La 100 (FM 99.9 Buenos Aires)",           "http://buecrplb01.cienradios.com.ar/la100.mp3", "http://www.cienradios.com.ar/argentina/La_100/home" ),
     new Station( "Mía (FM 104.1 Córdoba)",                  "http://buecrplb01.cienradios.com.ar/Mia.mp3", "http://www.cienradios.com.ar/argentina/mia/home" ),
     new Station( "FM Del Lago (FM 92.1 Bariloche)",         "http://buecrplb01.cienradios.com.ar/Del_Lago_64.mp3", "http://www.cienradios.com.ar/argentina/FM_Del_Lago/home" ),
